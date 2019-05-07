@@ -25,8 +25,6 @@
 
 
 /* *** DEFINES AND LOCAL DATA TYPE DEFINATION ****************************************** */
-#define TOT_THREADS       10
-#define EACH_THREAD_TIMES 20
 
 
 /* *** EXTERNS / LOCAL / GLOBALS VARIEBLES ********************************************* */
@@ -42,7 +40,7 @@ void * threadFunc(void *threadData)
 
 	data = *((unsigned int *)threadData);
 
-	for(i = 0; i < EACH_THREAD_TIMES; i++){
+	for(i = 0; i < 20; i++){
 		pthread_mutex_lock(&mtx);
 
 		globalMemo++;
@@ -56,6 +54,7 @@ void * threadFunc(void *threadData)
 
 int main(int argc, char *argv[])
 {
+#define TOT_THREADS       10
 	int ptRet = 0;
 	unsigned int i = 0;
 	pthread_t threads[TOT_THREADS];
