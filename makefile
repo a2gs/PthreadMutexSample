@@ -7,7 +7,7 @@ CFLAGS_DEFINES = -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -D_POSIX_SOURCE=1
 CFLAGS = $(CFLAGS_OPTIMIZATION) $(CFLAGS_VERSION) $(CFLAGS_WARNINGS) $(CFLAGS_DEFINES)
 
 all: clean
-	$(CC) -o mutex mutex.c $(CFLAGS) -lpthread
+	$(CC) -o pthreadMutex_Sample pthreadMutex_Sample.c $(CFLAGS) -lpthread
 
 clean:
-	-rm mutex
+	-rm pthreadMutex_Sample

@@ -1,14 +1,40 @@
+/* Andre Augusto Giannotti Scota (a2gs)
+ * andre.scota@gmail.com
+ *
+ * A simple sample of pthread and mutex.
+ *
+ * MIT License
+ *
+ */
+
+/* pthreadMutex_Sample.c
+ * A simple sample of pthread and mutex.
+ *
+ *  Who     | When       | What
+ *  --------+------------+----------------------------
+ *   a2gs   | 07/05/2019 | Creation
+ *          |            |
+ */
+
+
+/* *** INCLUDES ************************************************************************ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
 
+
+/* *** DEFINES AND LOCAL DATA TYPE DEFINATION ****************************************** */
 #define TOT_THREADS       10
 #define EACH_THREAD_TIMES 20
 
+
+/* *** EXTERNS / LOCAL / GLOBALS VARIEBLES ********************************************* */
 unsigned int globalMemo = 0;
 pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;
 
+
+/* *** FUNCTIONS *********************************************************************** */
 void * threadFunc(void *threadData)
 {
 	unsigned int i = 0;
