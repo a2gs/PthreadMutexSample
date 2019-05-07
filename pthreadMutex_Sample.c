@@ -54,7 +54,7 @@ void * threadFunc(void *threadData)
 
 int main(int argc, char *argv[])
 {
-#define TOT_THREADS       10
+#define TOT_THREADS (10)
 	int ptRet = 0;
 	unsigned int i = 0;
 	pthread_t threads[TOT_THREADS];
